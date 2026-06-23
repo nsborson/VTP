@@ -10,6 +10,52 @@ This project contains a complete VTP lab setup using Cisco Packet Tracer. It dem
 
 ![Network Topology](topology.png)
 
+**Description**: Complete network topology diagram showing all switches and their interconnections for the VTP lab setup.
+
+## Configuration Screenshots
+
+### VTP Server Configuration
+
+![VTP Server Configuration](server.png)
+
+**Description**: Shows the configuration of the VTP Server switch. The VTP Server is responsible for managing and distributing VLAN information to all VTP Clients in the domain. Key configurations include:
+- VTP Mode: Server
+- VTP Domain Name
+- VLAN Database and revision numbers
+- Trunk port settings
+
+### VTP Client 1 Configuration
+
+![VTP Client 1 Configuration](client-1.png)
+
+**Description**: Displays the first VTP Client switch configuration. VTP Clients receive VLAN information from the VTP Server and synchronize their VLAN databases automatically. Configuration details:
+- VTP Mode: Client
+- Joined to the same VTP domain as the server
+- Automatic VLAN synchronization enabled
+- Trunk ports connecting to other switches
+
+### VTP Client 2 Configuration
+
+![VTP Client 2 Configuration](client-2.png)
+
+**Description**: Shows the second VTP Client switch setup. This client demonstrates VLAN propagation across multiple switches in the VTP domain with identical configuration to Client 1 but different physical location.
+
+### VTP Client 3 Configuration
+
+![VTP Client 3 Configuration](client-3.png)
+
+**Description**: Depicts the third VTP Client switch configuration. Multiple clients in the same VTP domain ensure redundancy and comprehensive VLAN distribution across the network infrastructure.
+
+### VTP Transparent Mode Configuration
+
+![VTP Transparent Mode Configuration](transparent.png)
+
+**Description**: Illustrates a switch configured in VTP Transparent mode. Transparent mode switches:
+- Do not participate in VTP domain membership
+- Forward VTP advertisements but do not synchronize VLAN databases
+- Maintain their own independent VLAN database
+- Useful for network segmentation and isolation
+
 ## Project Contents
 
 - **VTP.pkt** - Cisco Packet Tracer simulation file with complete lab setup
